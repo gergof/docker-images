@@ -1,0 +1,1 @@
+0 23 * * * env $(cat /etc/environment) mariadb-dump -u root -p${MYSQL_ROOT_PASSWORD} $MYSQL_DATABASE > /backup/dump.sql

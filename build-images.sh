@@ -98,7 +98,7 @@ log "Building images"
 
 for image in $toBuild; do
 	versionvar="${image}_version"
-	imageName="$(echo $image | sed 's/_/-/g' | sed 's/__/\//g')"
+	imageName="$(echo $image | sed 's/_/-/g' | sed 's/--/\//g')"
 
 	build_image "$imageName" "${!versionvar}" "./$image"
 done
@@ -108,7 +108,7 @@ if ask "Would you like to push these images?"; then
 
 	for image in $toBuild; do
 		versionvar="${image}_version"
-		imageName="$(echo $image | sed 's/_/-/g' | sed 's/__/\//g')"
+		imageName="$(echo $image | sed 's/_/-/g' | sed 's/--/\//g')"
 
 		push_image "$imageName" "${!versionvar}"
 	done

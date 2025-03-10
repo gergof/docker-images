@@ -1,2 +1,2 @@
 mariadb=11.4.3
-react-native-android-build=latest
+ci_images__react_native_android_build=latest

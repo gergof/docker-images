@@ -98,7 +98,7 @@ log "Building images"
 
 for image in $toBuild; do
 	versionvar="${image}_version"
-	imageName="$(echo $image | sed 's/__/\//g')"
+	imageName="$(echo $image | sed 's/_/-/g' | sed 's/__/\//g')"
 
 	build_image "$imageName" "${!versionvar}" "./$image"
 done

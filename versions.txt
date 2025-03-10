@@ -1,1 +1,2 @@
 mariadb=11.4.3
+react-native-android-build=latest

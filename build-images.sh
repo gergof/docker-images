@@ -108,7 +108,7 @@ if ask "Would you like to push these images?"; then
 
 	for image in $toBuild; do
 		versionvar="${image}_version"
-		imageName="$(echo $image | sed 's/__/\//g')"
+		imageName="$(echo $image | sed 's/_/-/g' | sed 's/__/\//g')"
 
 		push_image "$imageName" "${!versionvar}"
 	done
